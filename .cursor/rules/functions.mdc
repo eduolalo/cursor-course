@@ -1,0 +1,49 @@
+---
+name: fastapi-best-practices.mdc
+description: Best practices for FastAPI applications and CRUD operations
+globs: **/*.py
+---
+
+- Document each endpoint with clear descriptions and examples using docstrings.
+- Use Pydantic BaseModels for request and response validation to ensure data integrity.
+- Implement dependency injection for common functionalities (e.g., database sessions).
+- Use FastAPI's built-in support for OpenAPI to automatically generate API documentation.
+- Handle exceptions gracefully and provide meaningful error messages.
+
+---
+name: pydantic-best-practices.mdc
+description: Best practices for using Pydantic models in FastAPI
+globs: **/*.py
+---
+
+- Use Pydantic BaseModel for defining data schemas to leverage validation and serialization.
+- Define models with clear field types and constraints (e.g., min_length, max_length).
+- Utilize `Config` class within models to customize behavior (e.g., `orm_mode` for ORM integration).
+- Implement custom validators for complex validation logic using `@validator` decorators.
+- Keep models modular and reusable by separating them into different files if necessary.
+
+---
+name: database-best-practices.mdc
+description: Best practices for database interactions in FastAPI
+globs: **/*.py
+---
+
+- Use SQLAlchemy or Tortoise ORM for database interactions to maintain a clean architecture.
+- Implement session management to handle database connections efficiently.
+- Use asynchronous database calls to improve performance in FastAPI.
+- Ensure proper indexing on database fields that are frequently queried.
+- Write migration scripts using Alembic or similar tools to manage database schema changes.
+
+---
+name: testing-best-practices.mdc
+description: Best practices for testing FastAPI applications
+globs: **/*.py
+---
+
+- Use pytest for writing unit and integration tests for your FastAPI application.
+- Test each endpoint with various scenarios, including valid and invalid inputs.
+- Utilize FastAPI's TestClient for simulating requests to your application during tests.
+- Mock external services and database calls to isolate tests and improve reliability.
+- Ensure coverage for all critical paths and edge cases in your application logic.
+
+By following these best practices, you can ensure that your FastAPI project is well-structured, maintainable, and efficient.

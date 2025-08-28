@@ -1,0 +1,10 @@
+---
+name: conventional-commits-best-practices.mdc
+description: Guidelines for following the Conventional Commits standard
+globs: **/*.md
+---
+
+- Use the format: `<type>(<scope>): <subject>`.
+- Types include: feat (new feature), fix (bug fix), docs (documentation), style (formatting), refactor (code change), test (adding tests), chore (maintenance).
+- Keep the subject line under 72 characters.
+- Use the body to explain the "why" behind the changes if necessary.
